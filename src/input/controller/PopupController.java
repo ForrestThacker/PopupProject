@@ -7,6 +7,7 @@ public class PopupController
 {
 	private PopupDisplay myPopups;
 	private Thing myThing;
+	private int does;
 	
 	public PopupController()
 	{
@@ -26,8 +27,6 @@ public class PopupController
 		while(!isInteger(tempAge))
 		{
 			tempAge = myPopups.getAnswer("Type in an integer value!!!!!");
-		}
-		
 		if(isInteger(tempAge))
 		{
 			age = Integer.parseInt(tempAge);
@@ -61,7 +60,7 @@ public class PopupController
 		
 		myThing = new Thing(name, age, weight);
 		
-		myPopups.displayResponse(myThing.toString());
+		myPopups.displayResponse(myThing.toString()); }
 	}
 	
 	private boolean isInteger(String input)
